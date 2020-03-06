@@ -87,16 +87,16 @@ public class Game extends GameBoard {
 
     public boolean checkWinner() {
 
-        List topRow = Arrays.asList(1, 2, 3);
-        List midRow = Arrays.asList(4, 5, 6);
-        List botRow = Arrays.asList(7, 8, 9);
-        List leftCol = Arrays.asList(1, 4, 7);
-        List midCol = Arrays.asList(2, 5, 8);
-        List rightCol = Arrays.asList(3, 6, 9);
-        List cross1 = Arrays.asList(1, 5, 9);
-        List cross2 = Arrays.asList(7, 5, 3);
+        List<Integer> topRow = Arrays.asList(1, 2, 3);
+        List<Integer> midRow = Arrays.asList(4, 5, 6);
+        List<Integer> botRow = Arrays.asList(7, 8, 9);
+        List<Integer> leftCol = Arrays.asList(1, 4, 7);
+        List<Integer> midCol = Arrays.asList(2, 5, 8);
+        List<Integer> rightCol = Arrays.asList(3, 6, 9);
+        List<Integer> cross1 = Arrays.asList(1, 5, 9);
+        List<Integer> cross2 = Arrays.asList(7, 5, 3);
 
-        List<List> winning = new ArrayList<>();
+        List<List<Integer>> winning = new ArrayList<>();
 
         winning.add(topRow);
         winning.add(midRow);
@@ -107,7 +107,7 @@ public class Game extends GameBoard {
         winning.add(cross1);
         winning.add(cross2);
 
-        for (List l : winning) {
+        for (List<Integer> l : winning) {
             if (playerPosition.containsAll(l)) {
                 System.out.println("Congratulation You won!!!");
                 return true;
